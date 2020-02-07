@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('build') {
+
+            steps {
+                sh 'mkdir build && cd build && cmake .. && make'
+            }
+        }
+
+        stage('test') {
+         
+            steps {
+                sh '../tests/unit_tests'
+            }
+        }
+
+        stage('deploy') {
+         
+            steps {
+                sh 'echo Test done.'
+            }
+        }
+    }
+}
