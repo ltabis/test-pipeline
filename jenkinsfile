@@ -3,21 +3,28 @@ pipeline {
 
     stages {
 
-        stage('build') {
+        stage('Pull from repository') {
+
+            steps {
+                sh 'git pull'
+            }
+        }
+
+        stage('Build project') {
 
             steps {
                 sh 'mkdir build && cd build && cmake .. && make'
             }
         }
 
-        stage('test') {
+        stage('Test code') {
          
             steps {
                 sh '../tests/unit_tests'
             }
         }
 
-        stage('deploy') {
+        stage('Deploy code') {
          
             steps {
                 sh 'echo Test done.'
