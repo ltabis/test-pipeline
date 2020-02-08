@@ -5,13 +5,11 @@ pipeline {
 
         stage('Build project') {
 
-            steps {
-                cmakeBuild
-                  generator: 'Unix Makefiles',
-                  buildDir: 'build',
-                  sourceDir: 'APCPPLib/lib/src',
-                  installation: 'InSearchPath',
-            }
+            cmakeBuild
+              generator: 'Unix Makefiles',
+              buildDir: 'build',
+              sourceDir: 'APCPPLib/lib/src',
+              installation: 'InSearchPath',
         }
 
         stage('Test code') {
