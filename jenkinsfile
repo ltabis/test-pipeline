@@ -6,8 +6,23 @@ pipeline {
         stage('Build project') {
 
             steps {
-                cmakeBuild generator: 'Unix Makefiles', buildDir: 'build', buildType: 'Debug', sourceDir: 'APCPPLib/lib/src', installation: 'InSearchPath'
+                cmakeBuild generator: 'Unix Makefiles', buildDir: 'build', buildType: 'Debug', installation: 'InSearchPath'
             }
         }
     }
 }
+
+    //     stage('Test code') {
+         
+    //         steps {
+    //             sh '../tests/unit_tests'
+    //         }
+    //     }
+
+    //     stage('Deploy code') {
+         
+    //         steps {
+    //             sh 'echo Test done.'
+    //         }
+    //     }
+    // }
