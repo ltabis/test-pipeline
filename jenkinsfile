@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Pull from repository') {
-
-            steps {
-                sh 'git pull'
-            }
-        }
-
         stage('Build project') {
 
             steps {
