@@ -6,7 +6,6 @@ pipeline {
         stage('Build project') {
 
             cmakeBuild
-              generator: 'Unix Makefiles',
               buildDir: 'build',
               sourceDir: 'APCPPLib/lib/src',
               installation: 'InSearchPath',
