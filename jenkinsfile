@@ -6,7 +6,11 @@ pipeline {
         stage('Build project') {
 
             steps {
-                sh 'mkdir build && cd build && cmake .. && make'
+                cmakeBuild
+                  generator: 'Unix Makefiles',
+                  buildDir: 'build',
+                  sourceDir: 'APCPPLib/lib/src',
+                  installation: 'InSearchPath',
             }
         }
 
