@@ -1,10 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image: 'rikorose/gcc-cmake:latest'
+        }
+    }
 
     stages {
-
         stage('Build project') {
-
             steps {
                 cmake installation: 'InSearchPath', arguments: '-B build .'
                 cmakeBuild generator: 'Unix Makefiles', sourceDir: 'APCPPLib/', buildDir: 'build', buildType: 'Debug', installation: 'InSearchPath', steps: [[args: '..']]
