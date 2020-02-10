@@ -51,7 +51,6 @@ add_executable(unit_tests
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/main.cpp
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/Exception/test_exception.cpp
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/Maths/test_triangles.cpp
-              ${CMAKE_CURRENT_SOURCE_DIR}/tests/Utils/test_tuples.cpp
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/Log/test_logger.cpp
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/Game/test_sceneStateMachine.cpp)
 
