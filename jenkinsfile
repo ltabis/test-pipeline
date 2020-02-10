@@ -5,8 +5,8 @@ pipeline {
         stage('Build project') {
             steps {
                 sh 'cd APCPPLib/'
+                sh 'ls -l'
                 cmake installation: 'InSearchPath', arguments: '-B build .'
-                cmakeBuild generator: 'Unix Makefiles', sourceDir: 'APCPPLib/', buildDir: 'build', buildType: 'Debug', installation: 'InSearchPath', steps: [[args: '..']]
             }
         }
     }
