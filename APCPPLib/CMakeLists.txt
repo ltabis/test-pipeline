@@ -46,7 +46,7 @@ set_target_properties(APCPPLib PROPERTIES VERSION ${PROJECT_VERSION})
 
 # Creating executable of unit tests
 include(GoogleTest)
-set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ../tests)
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/tests)
 add_executable(unit_tests
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/main.cpp
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/Exception/test_exception.cpp
