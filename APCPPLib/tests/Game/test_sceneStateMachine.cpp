@@ -214,6 +214,7 @@ TEST(SceneStateMachineTests, SceneStateMachine_notify)
 	ASSERT_EQ(machine->update(), true);
 
 	// The scene should have notified the mediator to pop it.
+    ASSERT_EQ(machine->name(), "Notifye");
     ASSERT_EQ(machine->size(), 0);
 
     // Re-adding a scene to the machine.
