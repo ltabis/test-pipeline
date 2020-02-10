@@ -7,5 +7,15 @@ pipeline {
                 cmake installation: 'InSearchPath', arguments: '-B build .'
             }
         }
+        stage('Test code') {
+            steps {
+                sh './APCPPLib/tests/unit_tests'
+            }
+        }
+        stage('Deploy code') {
+            steps {
+                sh 'echo Needs to be inside a temporary repository, and then push to the desired repository.'
+            }
+        }
     }
 }
