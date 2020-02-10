@@ -1,5 +1,5 @@
 # Jenkins image.
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:latest
 
 # Installing cmake.
 USER root
