@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build project') {
             steps {
-                cmake installation: 'InSearchPath', arguments: '-B build .'
+                cmake installation: 'InSearchPath', arguments: '-B build APCPPLib'
             }
         }
         stage('Test code') {
