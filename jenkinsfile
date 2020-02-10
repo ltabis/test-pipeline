@@ -5,6 +5,7 @@ pipeline {
         stage('Build project') {
             steps {
                 cmake installation: 'InSearchPath', arguments: '-B build APCPPLib'
+                sh 'make -C /var/jenkins_home/workspace/Testing/build'
             }
         }
         stage('Test code') {
