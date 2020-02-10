@@ -22,7 +22,6 @@ find_package(GTest REQUIRED)
 set(SRC ${CMAKE_CURRENT_SOURCE_DIR}/lib/src/Exception/Exception.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/src/Log/Logger.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/src/Benchmarking/Breakpoint.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/src/Maths/Triangles.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/src/Utils/LibraryLoader.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/src/Game/SceneStateMachine.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/src/Game/AScene.cpp
@@ -50,7 +49,6 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/tests)
 add_executable(unit_tests
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/main.cpp
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/Exception/test_exception.cpp
-              ${CMAKE_CURRENT_SOURCE_DIR}/tests/Maths/test_triangles.cpp
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/Log/test_logger.cpp
               ${CMAKE_CURRENT_SOURCE_DIR}/tests/Game/test_sceneStateMachine.cpp)
 
