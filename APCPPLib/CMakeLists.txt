@@ -55,6 +55,6 @@ add_executable(unit_tests
 ## Linking libraries
 target_link_libraries(APCPPLib ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(unit_tests PUBLIC
-                      ${CMAKE_CURRENT_SOURCE_DIR}/APCPPLib
+                      APCPPLib
                       ${GTEST_LIBRARIES} pthread
                       ${CMAKE_THREAD_LIBS_INIT})
